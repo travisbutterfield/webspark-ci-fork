@@ -10,7 +10,6 @@ env:
 
 jobs:
   packages_split:
-    if: ${{ github.event.repository.name }} == "webspark-ci-forks"
     runs-on: ubuntu-latest
 
     strategy:
