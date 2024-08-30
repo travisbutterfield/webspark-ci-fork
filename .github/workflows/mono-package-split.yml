@@ -31,7 +31,7 @@ jobs:
         uses: "danharrin/monorepo-split-github-action@v2.3.0"
         with:
           # ↓ split "/web/modules/asu_modules/asu_brand" directory
-          package_directory: '/web/modules/asu_modules/${{ matrix.package.local_path }}'
+          package_directory: 'web/modules/asu_modules/${{ matrix.package.local_path }}'
 
           # ↓ into https://github.com/asuwebplatforms/asu_brand repository
           repository_organization: 'travisbutterfield'
@@ -52,7 +52,7 @@ jobs:
           tag: ${GITHUB_REF#refs/tags/}
 
           # ↓ split "/web/modules/asu_modules/asu_brand" directory
-          package_directory: '/web/modules/asu_modules/${{ matrix.package.local_path }}'
+          package_directory: 'web/modules/asu_modules/${{ matrix.package.local_path }}'
 
           # ↓ into https://github.com/asuwebplatforms/asu_brand repository
           repository_organization: 'travisbutterfield'
