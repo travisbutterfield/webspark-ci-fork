@@ -6,10 +6,6 @@ on:
       - WS2-1623
     tags:
       - '*'
-
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 jobs:
   packages_split:
     runs-on: ubuntu-latest
