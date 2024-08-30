@@ -20,6 +20,8 @@ jobs:
         package:
           - local_path: 'asu_brand'
             split_repository: 'asu_brand_fork'
+          - local_path: 'asu_user'
+            split_repository: 'asu_user_fork'
 
     steps:
       -   uses: "actions/checkout@v4.1.7"
