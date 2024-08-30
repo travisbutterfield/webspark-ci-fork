@@ -2,16 +2,15 @@ name: 'Split ASU Packages'
 
 on:
   push:
-    branches:
-      - WS2-1623
     tags:
-      - '*'
+      - '*.*.*'
 env:
   GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
 jobs:
   packages_split:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/WS2-1623'
 
     strategy:
       fail-fast: false
