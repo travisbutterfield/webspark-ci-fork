@@ -10,7 +10,6 @@ env:
 jobs:
   packages_split:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/WS2-1623'
 
     strategy:
       fail-fast: false
