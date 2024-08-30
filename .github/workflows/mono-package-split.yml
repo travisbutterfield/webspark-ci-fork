@@ -10,7 +10,7 @@ env:
 
 jobs:
   packages_split:
-    if: github.repository == 'travisbutterfield/webspark-ci'
+    if: github.repository == 'travisbutterfield/webspark-ci-fork'
     runs-on: ubuntu-latest
 
     strategy:
