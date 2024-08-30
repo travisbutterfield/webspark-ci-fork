@@ -9,6 +9,7 @@ env:
 
 jobs:
   packages_split:
+    if: github.repository == "webspark-ci-fork"
     runs-on: ubuntu-latest
 
     strategy:
