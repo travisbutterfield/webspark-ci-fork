@@ -7,7 +7,7 @@ on:
     tags:
       - '*'
 env:
-  GITHUB_TOKEN: ${{ secrets.TEST }}
+  GITHUB_TOKEN: ${{ secrets.ASU_BRAND }}
 
 jobs:
   packages_split:
