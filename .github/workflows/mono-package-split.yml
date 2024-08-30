@@ -23,12 +23,12 @@ jobs:
             split_repository: 'asu_brand'
 
     steps:
-      -   uses: actions/checkout@v2
+      -   uses: "actions/checkout@v4.1.7"
 
       # no tag
       -
         if: "!startsWith(github.ref, 'refs/tags/')"
-        uses: "danharrin/monorepo-split-github-action@2.3.0"
+        uses: "danharrin/monorepo-split-github-action@v2.3.0"
         with:
           # ↓ split "/web/modules/asu_modules/asu_brand" directory
           package_directory: '/web/modules/asu_modules/${{ matrix.package.local_path }}'
@@ -47,7 +47,7 @@ jobs:
       # with tag
       -
         if: "startsWith(github.ref, 'refs/tags/')"
-        uses: "danharrin/monorepo-split-github-action@2.3.0"
+        uses: "danharrin/monorepo-split-github-action@v2.3.0"
         with:
           tag: ${GITHUB_REF#refs/tags/}
 
