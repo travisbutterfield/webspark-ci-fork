@@ -1,4 +1,4 @@
-# ASU Brand module for Drupal 9 CRIPES
+# ASU Brand module for Drupal 9 Yay!
 
 The ASU Brand module provides the following functionality:
 * An ASU branded, accessible, Web Standards compliant Header with integration
