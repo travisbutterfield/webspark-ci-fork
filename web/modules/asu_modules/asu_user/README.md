@@ -1,4 +1,4 @@
-# ASU User module for Drupal 9 BLAH
+# ASU User module for Drupal 9 Yip yip yip
 
 ## Description 
 
