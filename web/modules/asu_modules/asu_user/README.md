@@ -1,5 +1,4 @@
-# ASU User module for Drupal 9 Yip yip yip
-
+# ASU User module for Drupal 9 poopy
 ## Description 
 
 The ASU User module provides ASU customizations on the users.
