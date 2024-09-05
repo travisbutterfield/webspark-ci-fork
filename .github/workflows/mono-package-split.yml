@@ -6,7 +6,7 @@ on:
       - 'v[0-9]+.[0-9]+.[0-9]+'
   workflow_dispatch:
 env:
-  GITHUB_TOKEN: ${{ secrets.ASU_USER_FORK }}
+  GITHUB_TOKEN: ${{ secrets.ULTIMATE_AWESOME }}
 
 jobs:
   packages_split:
