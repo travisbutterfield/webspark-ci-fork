@@ -11,10 +11,10 @@ jobs:
       fail-fast: false
       matrix:
         package:
-          - local_path: '/web/modules/asu_modules/asu_user' # the local path to the package which should be separated
+          - local_path: 'web/modules/asu_modules/asu_user' # the local path to the package which should be separated
             split_repository: 'https://github.com/travisbutterfield/asu_user_fork.git' # the target repository where the changed should be pushed
             default_branch: 'main' # the default branch of the package (most it is `main`)
-          - local_path: '/web/modules/asu_modules/asu_brand'
+          - local_path: 'web/modules/asu_modules/asu_brand'
             split_repository: 'https://github.com/travisbutterfield/asu_brand_fork.git'
             default_branch: 'main'
             
