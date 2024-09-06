@@ -1,4 +1,4 @@
-name: 'New Split ASU Packages'
+name: 'Split ASU Packages'
 
 on:
   push:
@@ -22,9 +22,7 @@ jobs:
             split_repository: 'asu_user_fork'
 
     steps:
-      -   uses: "actions/checkout@v4.1.7"
-
-      # no tag
+      - uses: actions/checkout@v4.1.7
       - uses: actions/create-github-app-token@v1
         id: app-token
         with:
@@ -34,25 +32,19 @@ jobs:
           repositories: "asu_user_fork,asu_brand_fork"
       - name: Set release version for branch or tag
         run: echo "RELEASE_VERSION=${{ github.ref }}" >> $GITHUB_ENV
+
+      # no tag
       -
         if: "!startsWith(github.ref, 'refs/tags/')"
         uses: "danharrin/monorepo-split-github-action@v2.3.0"
         env:
           GITHUB_TOKEN: x-access-token:${{ steps.app-token.outputs.token }}
         with:
-          # ↓ split "/web/modules/asu_modules/asu_brand" directory
           package_directory: 'web/modules/asu_modules/${{ matrix.package.local_path }}'
-
-          # ↓ into https://github.com/asuwebplatforms/asu_brand repository
           repository_organization: 'travisbutterfield'
           repository_name: '${{ matrix.package.split_repository }}'
-
-          # [optional, with "github.com" as default]
-#          repository_host: git.private.com:1234
-
-          # ↓ the user signed under the split commit
-          user_name: "tbutterf"
-          user_email: "tbutterf@asu.edu"
+          user_name: "ws2-release-bot"
+          user_email: "ws2-release-bot@asu.edu"
 
       # with tag
       -
@@ -62,17 +54,8 @@ jobs:
           GITHUB_TOKEN: x-access-token:${{ steps.app-token.outputs.token }}
         with:
           tag: ${GITHUB_REF#refs/tags/}
-
-          # ↓ split "/web/modules/asu_modules/asu_brand" directory
           package_directory: 'web/modules/asu_modules/${{ matrix.package.local_path }}'
-
-          # ↓ into https://github.com/asuwebplatforms/asu_brand repository
           repository_organization: 'travisbutterfield'
           repository_name: '${{ matrix.package.split_repository }}'
-
-          # [optional, with "github.com" as default]
-          # repository_host: git.private.com:1234
-
-          # ↓ the user signed under the split commit
-          user_name: "tbutterf"
-          user_email: "tbutterf@asu.edu"
+          user_name: "ws2-release-bot"
+          user_email: "ws2-release-bot@asu.edu"
