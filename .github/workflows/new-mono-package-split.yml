@@ -58,6 +58,8 @@ jobs:
       -
         if: "startsWith(github.ref, 'refs/tags/')"
         uses: "danharrin/monorepo-split-github-action@v2.3.0"
+        env:
+          GITHUB_TOKEN: x-access-token:${{ steps.app-token.outputs.token }}
         with:
           tag: ${GITHUB_REF#refs/tags/}
 
