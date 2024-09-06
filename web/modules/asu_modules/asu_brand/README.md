@@ -1,4 +1,4 @@
-# ASU Brand module for Drupal 9 Dogfights!
+# ASU Brand module for Drupal 9 Duckbilled Platypus!
 
 The ASU Brand module provides the following functionality:
 * An ASU branded, accessible, Web Standards compliant Header with integration
