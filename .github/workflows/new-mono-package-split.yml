@@ -30,8 +30,6 @@ jobs:
           private-key: ${{ secrets.PRIVATE_KEY }}
           owner: ${{ github.repository_owner }}
           repositories: "asu_user_fork,asu_brand_fork"
-      - name: Set release version for branch or tag
-        run: echo "RELEASE_VERSION=${{ github.ref }}" >> $GITHUB_ENV
 
       # no tag
       -
