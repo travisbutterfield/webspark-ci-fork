@@ -1,4 +1,4 @@
-# ASU User module for Drupal 9 Monkeys!!
+# ASU User module for Drupal 9 Lame Sauce USA
 
 ## Description 
 
