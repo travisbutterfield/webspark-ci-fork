@@ -29,7 +29,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      # Utilize a Github App for access to the various repositories.
+      # Utilize a Github App to generate a token for access to the various repositories.
       # This allows us to avoid hard coding a personal access token.
       # Inspired by https://devopsjournal.io/blog/2022/01/03/GitHub-Tokens,
       # but we are using a newer, better, official github action instead of
