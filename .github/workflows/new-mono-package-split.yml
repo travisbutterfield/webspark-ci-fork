@@ -50,7 +50,8 @@ jobs:
       # read-only github repositories. This may seem awkward, but it's because
       # Packagist requires each repo to be standalone, unlike what we are able
       # to do with JavaScript where the monorepo splits out via tagging and
-      # does not require "shadow" repositories.
+      # does not require "shadow" repositories. 
+      # See https://blog.logrocket.com/hosting-all-your-php-packages-together-in-a-monorepo
 
       # no tag
       -
